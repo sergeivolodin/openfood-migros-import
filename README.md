@@ -10,12 +10,12 @@
 # (These contain the barcodes that we need)
 ./get_products_infos_from_ids.sh < migros_ids.txt
 
-# Check which product is missing from OpenFood database (use their
-# postgres database directly)
-./filter_existing_products.py
+# Run python file to obtain barcode-category mapping:
 ```
-
-## Data dump
-Get the data retrieved on 20.11.2016:
-
-https://github.com/simonbru/openfood-migros-import/releases/download/v1/datadump.zip
+$ cd infofiles/scripts
+$ virtualenv -p $(which python3) venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+$ python migros-barcode-category.py
+# migros-barcode-category.csv must appear
+```
