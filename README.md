@@ -11,6 +11,7 @@
 ./get_products_infos_from_ids.sh < migros_ids.txt
 
 # Run python file to obtain barcode-category mapping:
+
 ```
 $ cd infofiles/scripts
 $ virtualenv -p $(which python3) venv
